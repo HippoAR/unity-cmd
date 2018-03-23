@@ -1,8 +1,6 @@
 #! /bin/sh
 
-project="xx"
-
-echo "Attempting to build $project for OS X"
+echo "Attempting to build $(pwd) for iOS"
 /Applications/Unity/Unity.app/Contents/MacOS/Unity \
   -batchmode \
   -nographics \
@@ -11,7 +9,7 @@ echo "Attempting to build $project for OS X"
   -serial UNITY_SERIAL_NUMBER \
   -username UNITY_USERNAME \
   -password UNITY_PASSWORD \
-  -projectPath . \
+  -projectPath $(pwd) \
   -executeMethod Build.MyBuild.BuildIOS \
   -quit
 
