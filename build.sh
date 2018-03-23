@@ -12,7 +12,7 @@ echo "Attempting to build $project for OS X"
   -username UNITY_USERNAME \
   -password UNITY_PASSWORD \
   -projectPath . \
-  -executeMethod MyBuild.BuildIOS \
+  -executeMethod Build.MyBuild.BuildIOS \
   -quit
 
 echo 'Logs from build'
