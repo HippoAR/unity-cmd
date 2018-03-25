@@ -3,8 +3,7 @@
 echo "Attempting to build $(pwd) for iOS"
 /Applications/Unity/Unity.app/Contents/MacOS/Unity \
   -batchmode \
-  -nographics \
-  -logFile $(pwd)/unity-serial.log \
+  -logFile \
   -serial $UNITY_SERIAL_NUMBER \
   -username $UNITY_USERNAME \
   -password $UNITY_PASSWORD \
@@ -13,13 +12,13 @@ echo "Attempting to build $(pwd) for iOS"
 /Applications/Unity/Unity.app/Contents/MacOS/Unity \
   -batchmode \
   -nographics \
-  -logFile $(pwd)/unity.log \
+  -logFile \
   -projectPath $(pwd) \
   -buildTarget iOS \
   -executeMethod Build.MyBuild.BuildIOS \
   -quit
 
-/Applications/Unity/Unity.app/Contents/MacOS/Unity -quit -batchmode -returnlicense
+/Applications/Unity/Unity.app/Contents/MacOS/Unity -quit -batchmode -returnlicense -logFile
 
 echo 'Logs from build'
 cat $(pwd)/unity.log
