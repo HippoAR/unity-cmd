@@ -1,10 +1,10 @@
 #! /bin/sh
 
-echo "Attempting to build $(pwd)"
+echo "Switch build target to ios"
 /Applications/Unity/Unity.app/Contents/MacOS/Unity \
   -batchmode \
   -nographics \
   -logFile \
   -projectPath $(pwd) \
-  -executeMethod Build.MyBuild.BuildIOS \
+  -buildTarget iOS \
   -quit

@@ -1,6 +1,6 @@
 #! /bin/sh
 
-echo "Add license"
+echo "Add License"
 /Applications/Unity/Unity.app/Contents/MacOS/Unity \
   -batchmode \
   -logFile \
